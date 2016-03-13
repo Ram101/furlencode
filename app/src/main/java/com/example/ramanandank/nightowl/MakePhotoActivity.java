@@ -280,7 +280,7 @@ public class MakePhotoActivity extends AppCompatActivity implements TimePickerDi
         }
 
         private String Uploading(String json) {
-            final String FORECAST_BASE_URL = "http://ajaybhat.koding.io:5000/furlencode/add/place";
+            final String FORECAST_BASE_URL = "http:/192.168.2.168:5000/furlencode/add/place";
             Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon().build();
             URL url = null;
             HttpURLConnection urlConnection = null;

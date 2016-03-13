@@ -7,6 +7,8 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -27,6 +29,16 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 
 public class MapsActivity extends Fragment implements OnMapReadyCallback, LocationListener, GoogleApiClient.OnConnectionFailedListener,
         GoogleApiClient.ConnectionCallbacks {
@@ -154,4 +166,16 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback, Locati
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
+
+    public static ItemshopnameFragment newInstance(int columnCount,double lat , double lon) {
+        ItemshopnameFragment fragment = new ItemshopnameFragment();
+        Bundle args = new Bundle();
+//        args.put(, columnCount);
+        args.putDouble("latitude", lat);
+        args.putDouble("longitude",lon);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+
 }
