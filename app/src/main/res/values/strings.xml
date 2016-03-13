@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">NightOwl</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_main">NightOwl</string>
+    <string name="title_camera">Hoot</string>
+    <string name="nick_name">Place name</string>
+    <string name="category">Category</string>
+    <string name="review">Review</string>
+    <string-array name="category">
+        <item>RESTAURANT</item>
+        <item>MEDICINES</item>
+        <item>CLOTHES</item>
+        <item>STREET FOOD</item>
+    </string-array>
+    <string name="err_msg_place_name">PLEASE ENTER PLACE NAME</string>
+    <string name="err_msg_review">PLEASE ENTER REVIEW</string>
 </resources>
